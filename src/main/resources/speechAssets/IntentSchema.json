@@ -1,0 +1,33 @@
+{
+  "intents": [
+    {
+      "intent": "TweetIntent",
+      "slots": [
+        {
+          "name": "Action",
+          "type": "LIST_OF_ACTIONS"
+        }
+      ]
+    },
+    {
+      "intent": "TweetForUserIntent",
+      "slots": [
+        {
+          "name": "Action",
+          "type": "LIST_OF_ACTIONS"
+        },
+        {
+          "name": "Preposition",
+          "type": "LIST_OF_PREPOSITIONS"
+        },
+        {
+          "name": "User",
+          "type": "LIST_OF_USERS"
+        }
+      ]
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+TweetIntent tweet
+TweetIntent random tweet
+TweetIntent {Action} a tweet
+TweetIntent {Action} me a tweet
+TweetIntent {Action} random tweet
+TweetIntent {Action} a random tweet
+TweetIntent {Action} me a random tweet
+TweetForUserIntent tweet {Preposition} {User}
+TweetForUserIntent random tweet {Preposition} {User}
+TweetForUserIntent {Action} a tweet {Preposition} {User}
+TweetForUserIntent {Action} me a tweet {Preposition} {User}
+TweetForUserIntent {Action} random tweet {Preposition} {User}
+TweetForUserIntent {Action} a random tweet {Preposition} {User}
+TweetForUserIntent {Action} me a random tweet {Preposition} {User}

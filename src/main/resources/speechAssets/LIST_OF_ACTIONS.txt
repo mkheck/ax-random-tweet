@@ -1,0 +1,6 @@
+get
+give
+play
+provide
+show
+read
