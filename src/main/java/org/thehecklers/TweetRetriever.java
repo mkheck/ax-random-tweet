@@ -11,7 +11,7 @@ import java.util.Random;
 import java.util.stream.Stream;
 
 /**
- * Created by markheckler on 3/4/17.
+ * Created by markheckler on 3/5/17.
  */
 @Component
 public class TweetRetriever {
@@ -52,9 +52,13 @@ public class TweetRetriever {
     public Tweet getRandomTweet(String fromUser) {
         String user = fromUser;
 
-        if (Stream.of("mk heck", "mk hack", "nk heck", "nk hack").anyMatch(s -> s.equalsIgnoreCase(fromUser))) {
+        if (Stream.of("mk heck", "mk hack", "nk heck", "nk hack", "mk hat", "k hat", "nk hat", "mk hacked", "mk pack",
+                "mk packed", "m. k. heck", "m. k. hack", "n. k. heck", "n. k. hack", "m. k. hat", "k. hat", "n. k. hat",
+                "m. k. hacked", "m. k. pack", "m. k. packed", "m. k. hat", "hack", "heck", "hat")
+                .anyMatch(s -> s.equalsIgnoreCase(fromUser))) {
             user = "mkheck";
-        } else if ("little idea".equalsIgnoreCase(fromUser)) {
+        } else if (Stream.of("little idea", "lil idea", "idea")
+                .anyMatch(s -> s.equalsIgnoreCase(fromUser))) {
             user = "littleidea";
         } else if ("pivotal cf".equalsIgnoreCase(fromUser)) {
             user = "pivotalcf";
@@ -65,6 +69,7 @@ public class TweetRetriever {
             QueryResult result = this.twitter.search(query);
             List<Status> tweets = result.getTweets();
 
+            System.out.println(">>> Twitter user: " + user);
             //tweets.stream().map(this::createTweet).forEach(System.out::println);
 
             return createTweet(tweets.get(new Random().nextInt(tweets.size())));
